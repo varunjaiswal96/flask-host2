@@ -1,0 +1,75 @@
+<html>
+<style>
+    body {
+        background-image: url('/static/Final2.png')
+
+    }
+    input:focus, textarea:focus{
+        outline : none;
+    }
+    .inputallignment{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 18rem;
+        align-items: center;
+        margin-top: 8rem;
+        margin-left: -32rem;
+    }
+    .resultallignment{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        height: 18rem;
+        align-items: center;
+        margin-top: 8rem;
+        margin-left: -32rem;
+    }
+    input{
+        height: 3rem;
+        width: 13rem;
+    }
+    .buttonclass{
+        margin-top: 5rem;
+        margin-left: 8rem;
+        width: 25rem;
+        height: 5rem;
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+    }
+
+</style>    
+<body style="background-image: url_for('static', filename='BigData_Image2.png')">
+<form action="/predict" method="post">
+    
+    <div class="inputallignment">
+        <input type="text" name="origin" style="background-color: #fcf8f1;">
+        <input type="text" name="destination" style="background-color: #fcf8f1;">
+        <input type="date" name="date" style="background-color: #fcf8f1;">
+        <input type="time" name="time" style="background-color: #fcf8f1;">
+    </div>
+    
+
+    
+     
+    
+
+    
+    <!-- Probability of getting delayed:{{result}} -->
+    
+    <button  class="buttonclass"></button>
+
+    Probability of getting delayed: {{result}}%
+    
+ 
+
+<!-- ORIGIN:<input type="text" name="origin"><br>
+DATE:<input type="date" name="date"><br>
+TIME:<input type="time" name="time"><br>
+Probability of getting delayed:{{result}} <br> -->
+<!-- <input type="submit"> -->
+</form>
+</body>
+
+</html>
